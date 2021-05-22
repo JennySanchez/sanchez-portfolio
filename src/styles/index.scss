@@ -1,1 +1,23 @@
 // This is where your application styles could go.
+
+.resume {
+    h2, h4 {
+        --space: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    p {
+        margin-bottom: 2rem;
+    }
+    
+    hr {
+        margin-top: 80px;
+        margin-bottom: 1rem;
+    }
+
+    > .bx--row {
+        .bx--row {
+            --space: 0;
+        }
+    }
+}
