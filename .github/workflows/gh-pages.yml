@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-      - run: yarn build
+      - run: yarn build:gh-pages
       -
         name: Deploy to GitHub Pages
         if: success()
