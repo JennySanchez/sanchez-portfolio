@@ -35,3 +35,51 @@
 h3[class*="h3"] {
     --space: 48px;
 }
+
+
+// h1#page-title {
+//     @include carbon--type-style('productive-heading-07');
+// }
+
+.leadspace {
+    background: url('/images/poster.png');
+    background-size: cover;
+    background-position: center center;
+    
+    position: relative;
+    
+    &::before {
+        content: '';
+        background: rgba(0,0,0,.7);
+        left: 0;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+    
+    .bx--grid {
+        padding-right: 16px;
+    }
+    
+    .bx--aspect-ratio::after {
+        margin-bottom: -1px;
+    }
+
+    &__cta {
+        .bx--tile,
+        .bx--image-card__img {
+            background: transparent;
+        }
+        
+        .bx--image-card__spacing {
+            margin: 0;
+            border-left: 1px solid rgba(255, 255, 255, .3);
+            border-bottom: 1px solid rgba(255, 255, 255, .3);
+        }
+    }
+    
+    + .bx--grid {
+        display: none;
+    }
+}
