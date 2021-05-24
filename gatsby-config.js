@@ -11,7 +11,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Jenny Hsiao Sanchez Portfolio",
-        icon: "src/images/sanchez-favicon.svg",
+        icon: "static/images/logo.svg",
         short_name: "Jenny Hsiao Sanchez",
         start_url: "/",
         background_color: "#ffffff",
@@ -22,7 +22,7 @@ module.exports = {
     {
         resolve: "gatsby-theme-carbon",
         options: {
-            iconPath: "src/images/sanchez-favicon.svg",
+            iconPath: "static/images/logo.svg",
             titleType: "prepend",
         }
     }
