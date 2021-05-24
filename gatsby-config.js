@@ -1,5 +1,6 @@
 module.exports = {
   pathPrefix: "/sanchez-portfolio",
+  assetPrefix: "/sanchez-portfolio",
   siteMetadata: {
     title: "Jenny Hsiao Sanchez",
     description: "Jenny Hsiao Sanchez's portfolio of work as a maker, design thinker, and a professional multidisciplinary Designer.",
