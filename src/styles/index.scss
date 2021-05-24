@@ -74,6 +74,12 @@ h3[class*="h3"] {
         }
     }
     
+    .image-card-group {
+        border-right: 1px solid rgba(255, 255, 255, .3);
+        z-index: 1;
+        position: relative;
+    }
+    
     + .bx--grid {
         display: none;
     }
