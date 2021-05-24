@@ -1,9 +1,6 @@
 import React from 'react';
-import { HomepageBanner, HomepageCallout, ImageCard, Row, Column } from 'gatsby-theme-carbon';
+import { ImageCard, Row, Column } from 'gatsby-theme-carbon';
 import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
-import { calloutLink } from './Homepage.module.scss';
-
-import Carbon from '/images/carbon.jpg';
 
 function Leadspace () {
     return (
