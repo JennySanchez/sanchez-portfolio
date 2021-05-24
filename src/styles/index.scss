@@ -21,3 +21,17 @@
         }
     }
 }
+
+.contact-form {
+    .bx--row {
+        margin-top: 24px;
+    }
+
+    .bx--btn {
+        margin-top: 24px;
+    }
+}
+
+h3[class*="h3"] {
+    --space: 48px;
+}
