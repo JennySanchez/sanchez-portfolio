@@ -4,7 +4,7 @@ import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
 
 function Leadspace () {
     return (
-        <div class="leadspace" style={{background: "url('./images/poster.png')"}}>
+        <div class="leadspace" style={{backgroundImage: "url('./images/poster.png')"}}>
             <div className="bx--grid">
                 <Row className="image-card-group">
                   <Column colMd={4} colLg={4} noGutterSm />
