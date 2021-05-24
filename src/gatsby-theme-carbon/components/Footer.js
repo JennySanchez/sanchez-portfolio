@@ -3,7 +3,7 @@ import Footer from 'gatsby-theme-carbon/src/components/Footer';
 
 const Content = () => (
     <>
-        <img src="./favicon.svg" alt="Jenny Hsiao Sanchez Logo" style={{float: 'left', width: '40px', marginRight: "16px"}} />
+        <img src="./../favicon.svg" alt="Jenny Hsiao Sanchez Logo" style={{float: 'left', width: '40px', marginRight: "16px"}} />
         <p>
           Jenny Hsiao Sanchez<br />
           Copyright © 2021
