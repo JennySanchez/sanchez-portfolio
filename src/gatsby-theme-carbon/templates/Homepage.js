@@ -7,8 +7,7 @@ function Leadspace () {
         <div class="leadspace" style={{backgroundImage: "url('./images/poster.png')"}}>
             <div className="bx--grid">
                 <Row className="image-card-group">
-                  <Column colMd={4} colLg={4} noGutterSm />
-                  <Column colMd={4} colLg={4} noGutterSm>
+                  <Column colMd={4} colLg={4} offsetLg={4} noGutterSm>
                     <ImageCard
                       title="Work"
                       aspectRatio="1:2"

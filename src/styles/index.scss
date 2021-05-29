@@ -1,5 +1,51 @@
 // This is where your application styles could go.
 
+.container {
+    overflow: hidden;
+    
+    
+    [class*="Footer-module--footer--"] {
+        &::after {
+            content: '';
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-color: $carbon--black-100;
+        }
+    }
+    
+    [class*=Footer-module--grid--] {
+        min-height: 9.5rem;
+    }
+}
+
+.container--homepage [class*="Footer-module--footer--"] {
+    position: relative;
+    z-index: 10000;
+    
+    [class*=Footer-module--grid--] {
+        min-height: 0;
+        padding-left: 16px;
+    }
+
+    [class*="Grid-module--column--"] {
+        display:none;
+    }
+
+    [class*="Footer-module--content--"] {
+        display: block;
+        margin-left: 0;
+        
+        img {
+            display: block;
+        }
+        
+        p {
+            padding: 0;
+        }
+    }
+}
+
 .resume {
     h2, h4 {
         --space: 1rem;
