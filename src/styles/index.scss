@@ -14,6 +14,35 @@ h1[class*=PageHeader-module--text] {
     }
 }
 
+
+
+
+
+@include carbon--breakpoint('md') {
+    footer {
+        [class*=Grid-module--column] {
+            order: 3;
+        }
+        [class*=Footer-module--content] {
+            order: 1;
+            margin-left: 0;
+            flex: 1;
+        }
+        .bx--row::before {
+            content: '';
+            display: block;
+            order: 2;
+            flex: 1;
+        }
+    }
+}
+
+@include carbon--breakpoint-down('md') {
+    .leadspace__cta .bx--image-card__spacing::before {
+        padding-top: 50%;
+    }
+}
+
 [class*=Aside-module--aside--] {
     margin-top: .75rem;
 }
@@ -35,7 +64,6 @@ h1[class*=PageHeader-module--text] {
             background-color: $carbon--black-100;
         }
     }
-    
     [class*=Footer-module--grid--] {
         min-height: 9.5rem;
     }
@@ -135,6 +163,7 @@ h3[class*="h3"] {
     
     .bx--grid {
         padding-right: 16px;
+        padding-left: 16px;
     }
     
     .bx--aspect-ratio::after {
