@@ -1,5 +1,15 @@
 // This is where your application styles could go.
 
+@include carbon--breakpoint('lg') {
+    [class*=Markdown-module--paragraph--responsive] {
+        width: 100% / 12 * 7;
+    }
+}
+
+[class*=Aside-module--aside--] {
+    margin-top: .75rem;
+}
+
 .container {
     overflow: hidden;
     
@@ -59,6 +69,8 @@
     hr {
         margin-top: 80px;
         margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid $ui-04;
     }
 
     > .bx--row {
