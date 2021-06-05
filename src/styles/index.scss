@@ -1,8 +1,16 @@
 // This is where your application styles could go.
 
+h1[class*=PageHeader-module--text] {
+    @include carbon--type-style('display-03', true);
+}
+
 @include carbon--breakpoint('lg') {
     [class*=Markdown-module--paragraph--responsive] {
         width: 100% / 12 * 7;
+    }
+
+    div[class*=PageHeader-module--page-header--] {
+        --height: 35rem;
     }
 }
 
