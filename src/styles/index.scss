@@ -10,9 +10,13 @@
     margin-top: .75rem;
 }
 
+[class*=AnchorLinks-module--list] {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
 .container {
     overflow: hidden;
-    
     
     [class*="Footer-module--footer--"] {
         &::after {
@@ -78,15 +82,26 @@
             --space: 0;
         }
     }
+    
+    [class*=Caption-module--caption] {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .contact-form {
+    --space: 5rem;
+
     .bx--row {
         margin-top: 24px;
     }
 
     .bx--btn {
         margin-top: 24px;
+        width: 100%;
+        min-height: 64px;
+        max-width: initial;
+        display: inline-flex;
+        align-items: flex-start;
     }
 }
 
@@ -154,17 +169,27 @@ h3[class*="h3"] {
     }
     
     h3 {
-        margin-top: 3rem;
         margin-bottom: 1.5rem;
     }
     
+    img + h3 {
+        --space: 5rem;
+    }
+    
+    img {
+        margin-top: 1rem;
+    }
+    
     p {
-        // margin-top: 1.5rem;
         margin-bottom: 1.5rem;
     }
     
     .bx--row {
         margin-top: 0;
+    }
+    
+    [class*=MiniCard-module--card] {
+        margin-bottom: 96px;
     }
 }
 
