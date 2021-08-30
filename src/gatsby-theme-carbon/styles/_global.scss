@@ -1,18 +1,35 @@
-$background-01: #603F1F;
-$hover-01: #775B40;
-$border-01: #7D5D3F;
 
-$background-02: #A97F56;
-$hover-02: #B5926F;
-$border-02: #97724E;
 
 $white-01: #FFFFFF;
 $white-02: #BEBEBE;
 
 $black-01: #000000;
 
+$background-01: #603F1F;
+$hover-01: #402A14;
+$border-01: #7D5D3F;
+
+// $background-02: $black-01;
+// $hover-02: #353535;
+// $border-02: #97724E;
+
+
+$background-02: $white-01;
+$hover-02: #E0E0E0;
+$border-02: #323232;
+
+$hover-03: #775b40;
+
 body {
     background-color: $background-01;
+
+    .container--dark {
+        background-color: $black-01;
+    }
+}
+
+button[class*=BackToTopBtn-module--button]:focus {
+    border-color: $hover-01;
 }
 
 
@@ -37,7 +54,7 @@ header.bx--header button[class*=Header-module--header-button][class*=Header-modu
     fill: $white-01;
 
     &:hover {
-        background-color: $hover-01;
+        background-color: $hover-03;
     }
 }
 
@@ -45,7 +62,7 @@ header.bx--header [class*=Header-module--searchIsOpenOnBar] {
     [class*=GlobalSearch-module--list] a[class*=GlobalSearch-module--active],
     button,
     [class*=GlobalSearch-module--inputWrapper] {
-        background-color: $border-01;
+        background-color: $hover-03;
 
         input::placeholder {
             color: $white-02;
@@ -58,22 +75,38 @@ header.bx--header [class*=Header-module--searchIsOpenOnBar] {
     border-color: $border-01;
 }
 
-// side nav
-nav[class*=LeftNav-module--side-nav--dark] {
-    background-color: $background-02;
-    border-color: $border-02;
+button.bx--btn.bx--btn--icon-only.bx--tooltip__trigger:focus {
+    border-color: $white-01;
 }
 
-nav[class*=LeftNav-module--side-nav--dark][class*=LeftNav-module--side-nav--dark] {
+// side nav
+nav.bx--side-nav.bx--side-nav {
+    background-color: $background-02;
+    border-color: $border-01;
+    
     a, button {
-        &, * {
-            color: $white-01 !important;
-            fill: $white-01 !important;
+        &, *, &:hover > .bx--side-nav__link-text {
+            color: $black-01 !important;
+            fill: $black-01 !important;
         }
 
         &.bx--side-nav__link--current,
         &:hover {
             background-color: $hover-02 !important;
+        }
+    }
+}
+
+a.bx--side-nav__link.bx--side-nav__link--current::before {
+    background-color: $background-01;
+}
+
+a.bx--side-nav__link,
+button.bx--side-nav__submenu {
+    &:focus {
+        &,
+        [class*=LeftNav-module--side-nav--dark] & {
+            outline-color: $hover-01;
         }
     }
 }
@@ -84,18 +117,114 @@ nav[class*=LeftNav-module--side-nav--dark][class*=LeftNav-module--side-nav--dark
 footer[class*=Footer-module--footer] {
     background-color: $background-01;
     border-color: $border-01;
-    color: $white-02 !important;
+    color: $white-01 !important;
     
     [class*=Footer-module--listItem] a {
-        color: $white-02 !important;
+        color: $white-01 !important;
         
         &:hover {
-            color: $white-01 !important;
+            color: $white-02 !important;
         }
     }
 
     &::after {
         background-color: $background-01;
+    }
+}
+
+// links
+
+a.bx--link.bx--link[class*=Link-module--link--] {
+    color: $background-01;
+    
+    &:active,
+    &:hover {
+        color: $hover-01;
+    }
+    
+    &:focus {
+        outline-color: $hover-01;
+    }
+}
+
+a[class*=AnchorLinks-module--link] {
+    &:hover {
+        color: $hover-01;
+    }
+    
+    &:focus {
+        outline-color: $hover-01;
+    }
+}
+
+a[class*=AutolinkHeader-module--anchor][class*=AutolinkHeader-module--left-anchor]:focus {
+    outline-color: $hover-01;
+}
+
+a[class*=AutolinkHeader-module--anchor] svg {
+    fill: $background-01;
+}
+
+.bx--image-card a.bx--tile:focus::after {
+    outline-color: $hover-01;
+}
+
+div[class*=ImageGallery-module--image-button-wrapper] {
+    &:focus {
+        img {
+            outline-color: $hover-01;
+        }
+    }
+}
+
+[class*=NextPrevious-module--wrapper][class*=NextPrevious-module--wrapper] {
+    background: $black-01;
+    border-top: 1px solid $border-02;
+}
+
+[class*=NextPrevious-module--link] a:focus {
+    outline-color: $hover-01;
+}
+
+// tabs
+
+[class*=PageTabs-module--selected-item] a[class*=PageTabs-module--link] {
+    border-top-color: $background-01;
+    
+    &:focus {
+        &,
+        .container--dark & {
+            outline-color: $hover-01;
+        }
+    }
+}
+
+a[class*=PageTabs-module--link] {
+    &:focus {
+        &,
+        .container--dark & {
+            outline-color: $hover-01;
+        }
+    }
+}
+
+[class*=PageTabs-module--tabs-container] {
+    border-top: 1px solid $border-02;
+    border-bottom: 1px solid $border-02;
+}
+
+// buttons
+.bx--btn.bx--btn--primary {
+    background-color: $background-01;
+    
+    &:active,
+    &:hover {
+        background-color: $hover-01;
+    }
+    
+    &:focus {
+        border-color: $hover-01;
+        box-shadow: inset 0 0 0 1px $hover-01, inset 0 0 0 2px var(--cds-ui-background, #f4f4f4)
     }
 }
 
