@@ -268,7 +268,8 @@ div[class*=PageTabs-module--tabs-container] {
 input:focus {
     outline-color: $background-01 !important;
     
-    + .bx--radio-button__label .bx--radio--button__appearance {
+    
+    + .bx--radio-button__label .bx--radio-button__appearance {
         box-shadow: 0 0 0 2px $background-01 !important;
     }
 }
