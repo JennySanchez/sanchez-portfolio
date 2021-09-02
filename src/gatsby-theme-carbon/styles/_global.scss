@@ -29,7 +29,7 @@ body {
 }
 
 button[class*=BackToTopBtn-module--button]:focus {
-    border-color: $hover-01;
+    border-color: $background-01;
 }
 
 
@@ -79,44 +79,54 @@ button.bx--btn.bx--btn--icon-only.bx--tooltip__trigger:focus {
     border-color: $white-01;
 }
 
+// Leadspace
+div[class*=PageHeader-module--page-header] {
+    background: $white-01;
+    color: $black-01;
+    border-bottom: 0 !important;
+}
+
 // side nav
+
 nav.bx--side-nav.bx--side-nav {
-    background-color: $background-02;
-    border-color: $border-01;
-    
+    background-color: $black-01;
+    border-color: #393939;
+
     a, button {
         &, *, &:hover > .bx--side-nav__link-text {
-            color: $black-01 !important;
-            fill: $black-01 !important;
+            color: $white-01 !important;
+            fill: $white-01 !important;
         }
 
         &.bx--side-nav__link--current,
         &:hover {
-            background-color: $hover-02 !important;
+            background-color: #393939 !important;
+        }
+        
+        &:active {
+            background-color: #6F6F6F !important;
+        }
+
+        &.bx--side-nav__link--current::before {
+            background-color: #603F1F !important;
         }
     }
-}
-
-a.bx--side-nav__link.bx--side-nav__link--current::before {
-    background-color: $background-01;
 }
 
 a.bx--side-nav__link,
 button.bx--side-nav__submenu {
     &:focus {
-        &,
-        [class*=LeftNav-module--side-nav--dark] & {
-            outline-color: $hover-01;
-        }
+        outline-color: $white-01 !important;
     }
 }
+
 
 
 // footer
 
 footer[class*=Footer-module--footer] {
     background-color: $background-01;
-    border-color: $border-01;
+    border-top: 1px solid #402A14;
     color: $white-01 !important;
     
     [class*=Footer-module--listItem] a {
@@ -127,7 +137,7 @@ footer[class*=Footer-module--footer] {
         }
         
         &:focus {
-            outline-color: $hover-01 !important;
+            outline-color: $background-01 !important;
         }
     }
 
@@ -147,7 +157,7 @@ a.bx--link.bx--link[class*=Link-module--link--] {
     }
     
     &:focus {
-        outline-color: $hover-01;
+        outline-color: $background-01;
     }
 }
 
@@ -157,12 +167,12 @@ a[class*=AnchorLinks-module--link] {
     }
     
     &:focus {
-        outline-color: $hover-01;
+        outline-color: $background-01;
     }
 }
 
 a[class*=AutolinkHeader-module--anchor][class*=AutolinkHeader-module--left-anchor]:focus {
-    outline-color: $hover-01;
+    outline-color: $background-01;
 }
 
 a[class*=AutolinkHeader-module--anchor] svg {
@@ -170,71 +180,96 @@ a[class*=AutolinkHeader-module--anchor] svg {
 }
 
 .bx--image-card a.bx--tile:focus::after {
-    outline-color: $hover-01;
+    outline-color: $white-01;
 }
 
 div[class*=ImageGallery-module--image-button-wrapper] {
     &:focus {
         img {
-            outline-color: $hover-01;
+            outline-color: $background-01;
         }
     }
 }
-
-[class*=NextPrevious-module--wrapper][class*=NextPrevious-module--wrapper] {
-    background: $black-01;
-    border-top: 1px solid $border-02;
-}
-
-[class*=NextPrevious-module--link] a:focus {
-    &,
-    .container--dark & {
-        outline-color: $hover-01;
+[class*=MiniCard-module--card--] {
+    
+    &:hover {
+        background: $hover-01;
     }
-}
 
-a.bx--tile--clickable:focus [class*=MiniCard-module--card--] {
-    outline: 2px solid $hover-01;
+    a.bx--tile--clickable:focus & {
+        outline: 2px solid $background-01;
+    }
 }
 
 // tabs
 
 [class*=PageTabs-module--selected-item] a[class*=PageTabs-module--link] {
-    border-top-color: $background-01;
-    
-    &:focus {
-        &,
-        .container--dark & {
-            outline-color: $hover-01;
-        }
-    }
+    color: $black-01;
+    border-top-color: #603F1F;
+    background: $white-01;
 }
 
 a[class*=PageTabs-module--link] {
+    
+    color: $black-01 !important;
+    
+    &:hover {
+        background: #f4f4f4;
+    }
+
     &:focus {
-        &,
-        .container--dark & {
-            outline-color: $hover-01;
-        }
+        outline-color: #603F1F !important;
     }
 }
 
-[class*=PageTabs-module--tabs-container] {
-    border-top: 1px solid $border-02;
-    border-bottom: 1px solid $border-02;
+div[class*=PageTabs-module--tabs-container] {
+    background: $white-01;
 }
 
 // buttons
 .bx--btn.bx--btn--primary {
     background-color: $background-01;
     
-    &:active,
+    &:active {
+        background-color: #2A1B0D;
+    }
+
     &:hover {
         background-color: $hover-01;
     }
     
     &:focus {
-        border-color: $hover-01;
+        border-color: $background-01;
         box-shadow: inset 0 0 0 1px $hover-01, inset 0 0 0 2px var(--cds-ui-background, #f4f4f4)
     }
 }
+
+
+// next previous module
+
+[class*=NextPrevious-module--wrapper][class*=NextPrevious-module--wrapper] {
+    background: #603F1F;
+    border-top: 1px solid #402A14;
+}
+
+[class*=NextPrevious-module--link] {
+    
+    a:hover {
+        background-color: #402A14;
+    }
+
+    a:focus {
+        outline-color: $white-01 !important;
+    }
+}
+
+// form elements
+
+input:focus {
+    outline-color: $background-01 !important;
+    
+    + .bx--radio-button__label .bx--radio--button__appearance {
+        box-shadow: 0 0 0 2px $background-01 !important;
+    }
+}
+
