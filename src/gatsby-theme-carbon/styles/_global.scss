@@ -187,7 +187,14 @@ div[class*=ImageGallery-module--image-button-wrapper] {
 }
 
 [class*=NextPrevious-module--link] a:focus {
-    outline-color: $hover-01;
+    &,
+    .container--dark & {
+        outline-color: $hover-01;
+    }
+}
+
+a.bx--tile--clickable:focus [class*=MiniCard-module--card--] {
+    outline: 2px solid $hover-01;
 }
 
 // tabs
