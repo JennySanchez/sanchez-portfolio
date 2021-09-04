@@ -18,13 +18,14 @@ const Logo = () => null;
 
 const links = {
   firstCol: [
-    { href: '#', linkText: 'Instagram' },
-    { href: '#', linkText: 'Pinterest' },
-    { href: '#', linkText: 'Twitter' },
+    { href: 'https://www.instagram.com/theoddestdetail/', linkText: 'Instagram' },
+    { href: 'https://www.pinterest.com/jenny_hsiao/_saved/', linkText: 'Pinterest' },
+    { href: 'https://twitter.com/TheOddestDetail', linkText: 'Twitter' },
   ],
   secondCol: [
-    { href: '#', linkText: 'LinkedIn' },
-    { href: '#', linkText: 'Dribbble' },
+    { href: 'https://www.linkedin.com/in/jennyhsiaosanchez', linkText: 'LinkedIn' },
+    { href: 'https://medium.com/@jennyhsiao', linkText: 'Medium' },
+    { href: 'https://dribbble.com/JennyHsiaoSanchez', linkText: 'Dribbble' },
   ],
 };
 
