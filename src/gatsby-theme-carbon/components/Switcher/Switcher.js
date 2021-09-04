@@ -2,25 +2,19 @@ import React from 'react';
 import Switcher, { SwitcherLink, SwitcherDivider } from 'gatsby-theme-carbon/src/components/Switcher/Switcher';
 
 const CustomSwitcher = () => <Switcher>
-    <SwitcherDivider>LinkedIn</SwitcherDivider>
-    <SwitcherLink href="#">
-      Article name one
+    <SwitcherDivider>Social medias</SwitcherDivider>
+    <SwitcherLink href="https://www.linkedin.com/in/jennyhsiaosanchez">
+      linkedin
     </SwitcherLink>
-    <SwitcherLink href="#">
-      Article name two
+    <SwitcherLink href="https://www.instagram.com/theoddestdetail/">
+      Instagram
     </SwitcherLink>
-    <SwitcherLink href="#">
-      Article name three
+    <SwitcherLink href="https://dribbble.com/JennyHsiaoSanchez">
+      Dribbble
     </SwitcherLink>
-    <SwitcherDivider>Medium articles</SwitcherDivider>
-    <SwitcherLink href="#">
-      Article name one
-    </SwitcherLink>
-    <SwitcherLink href="#">
-      Article name two
-    </SwitcherLink>
-    <SwitcherLink href="#">
-      Article name three
+    <SwitcherDivider>Articles</SwitcherDivider>
+    <SwitcherLink href="https://medium.com/@jennyhsiao">
+      Medium articles
     </SwitcherLink>
 </Switcher>;
 
