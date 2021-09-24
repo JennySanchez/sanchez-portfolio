@@ -23,6 +23,7 @@ module.exports = {
         options: {
             iconPath: "static/images/logo.svg",
             titleType: "prepend",
+            isSearchEnabled: false
         }
     }
   ],
