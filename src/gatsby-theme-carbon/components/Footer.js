@@ -10,7 +10,7 @@ const Content = () => (
         <img src={LogoImage} alt="Jenny Hsiao Sanchez logo" style={{float: 'left', width: '40px', marginRight: "16px"}} />
         <p>
           Jenny Hsiao Sanchez<br />
-          Copyright © 2022
+          Copyright ©2022
         </p>
     </>
 );
